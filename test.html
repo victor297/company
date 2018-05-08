@@ -1,0 +1,127 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>SAM</title>
+		<link rel="stylesheet" href="fontawesome/fontawesome-all.css">
+		<link rel="stylesheet" type="text/css" href="comp.css">
+	</head>
+	<body>
+		<div class="thehead">
+			<div class="icon-bar">
+				<a href="#"><i class="fa fa-search"></i>search</a>
+				<a href="#"><i class="fa fa-contao"></i>contact</a>
+				<a href="#"><i class="fa fa-language"></i>language</a>
+			</div>
+			<header><h1>Business Co</h1> <h6>Best solution for your business</h6></header>
+			<div class="menu">
+				<a class="a" href="#">Home</a>
+				<a class="b" href="#">Products</a>
+				<a class="c" href="#">Services</a>
+				<a class="d" href="#">Dealers</a>
+				<a class="e" href="#">Forum</a>
+			</div>
+		</div>
+
+		<div class="thebody">
+			<div class="pagenav"></div>
+			<div class="left">
+				<div class="login"></div>
+				<div class="underlogin"></div>
+				<div class="belowunder"></div>
+			</div>
+			<p>REQUESTS I
+				XHR GET Requests I
+				When AJAX was first formalized by the World Wide Web Consortium in 2006, it required the use of an XMLHttpRequest object, a JavaScript object that is used to retrieve data. There are several steps to creating an AJAX request using an XMLHttpRequest, or XHR, object.
+
+				Let's explore the diagram to the right, which displays the boilerplate code for a making a GET request using an XHR object.
+
+On the first line, we create an XMLHttpRequest object. We do that by typing new, then the type of object, XMLHttpRequest(). This is called the new operator.
+The object is saved in a const called xhr. Throughout this request, we'll be accessing properties of this object.
+On the next line, we save the URL to which we're going to make our request in a const called url.
+We set the responseType of the xhr object to 'json'. There are other possible response types, which you can read about here.
+
+				onreadystatechange is an event handler that is called whenever the value of the readyState property changes. We set it equal to an anonymous function. This function will handle the response to our request.
+
+				First, we check if the readyState of our xhr object is equal to XMLHttpRequest.DONE. If that evaluates to true, the code in the block executes. It is useful while writing a new program to log the response to the console so that you can see its structure. Later, you might change this function to add parts of the response to your web page or do something else with it entirely.
+
+				Then, we call the .open() method on our xhr object and pass it two arguments - 'GET' (the type of request) and url, the URL we're querying. .open() creates and structures the request. It tells the request what method to use, GET or POST, and what URL to query.
+
+				Finally, we call the .send() method on our xhr object and pass it no arguments. This is because data sent in GET requests is sent as part of the URL. Calling the .send() method sends the xhr object with its relevant information to the API URL.
+				REQUESTS I
+				XHR GET Requests I
+				When AJAX was first formalized by the World Wide Web Consortium in 2006, it required the use of an XMLHttpRequest object, a JavaScript object that is used to retrieve data. There are several steps to creating an AJAX request using an XMLHttpRequest, or XHR, object.
+
+				Let's explore the diagram to the right, which displays the boilerplate code for a making a GET request using an XHR object.
+
+				On the first line, we create an XMLHttpRequest object. We do that by typing new, then the type of object, XMLHttpRequest(). This is called the new operator.
+
+				The object is saved in a const called xhr. Throughout this request, we'll be accessing properties of this object.
+
+				On the next line, we save the URL to which we're going to make our request in a const called url.
+
+				We set the responseType of the xhr object to 'json'. There are other possible response types, which you can read about here.
+
+				onreadystatechange is an event handler that is called whenever the value of the readyState property changes. We set it equal to an anonymous function. This function will handle the response to our request.
+
+				First, we check if the readyState of our xhr object is equal to XMLHttpRequest.DONE. If that evaluates to true, the code in the block executes. It is useful while writing a new program to log the response to the console so that you can see its structure. Later, you might change this function to add parts of the response to your web page or do something else with it entirely.
+
+				Then, we call the .open() method on our xhr object and pass it two arguments - 'GET' (the type of request) and url, the URL we're querying. .open() creates and structures the request. It tells the request what method to use, GET or POST, and what URL to query.
+
+				Finally, we call the .send() method on our xhr object and pass it no arguments. This is because data sent in GET requests is sent as part of the URL. Calling the .send() method sends the xhr object with its relevant information to the API URL.
+			</p>
+		</div>		
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1/3</div>
+				<img src="images/part.jpg" style="width: 100%">
+				<div class="text">Corporate Partnerships</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2/3</div>
+				<img src="images/part1.jpg" style="width: 100%">
+				<div class="text">Using Technology to Improve Your Business Marketing Strategy</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3/3</div>
+				<img src="images/part3.jpg" style="width: 100%">
+				<div class="text">5 Tech Changes That Can Improve Your Business In 2018</div>
+			</div>
+		</div>
+		<br>
+		<div class="text-center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script  type="text/javascript">
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++)
+				{
+					slides[i].style.display = "none";  
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {slideIndex = 1}    
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					}
+					slides[slideIndex-1].style.display = "block";  
+					dots[slideIndex-1].className += " active";
+			    setTimeout(showSlides, 2000); // Change image every 2 seconds
+			}
+
+			$(document).ready(function(){
+				$(".a").click(function(){
+					$(".thebody").slideToggle();
+				});
+			});
+		</script>
+	</body>
+</html>
